@@ -112,7 +112,6 @@ class Codecs(
         bind(BYTE_SERIALIZER)
         bind(FLOAT_SERIALIZER)
         bind(DOUBLE_SERIALIZER)
-        bind(FileTreeCodec(fileSetSerializer, directoryFileTreeFactory))
         bind(FILE_SERIALIZER)
         bind(PATH_SERIALIZER)
         bind(ClassCodec)
@@ -150,6 +149,7 @@ class Codecs(
         bind(ListenerBroadcastCodec(listenerManager))
         bind(LoggerCodec)
 
+        bind(FileTreeCodec(fileSetSerializer, directoryFileTreeFactory))
         bind(ConfigurableFileCollectionCodec(fileCollectionFactory))
         bind(FileCollectionCodec(fileCollectionFactory))
 
